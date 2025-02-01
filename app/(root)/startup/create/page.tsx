@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import StartupForm from "@/components/StartupForm";
 import { redirect } from "next/navigation";
 
-const page = async () => {
+const Page = async () => {
   const session = await auth();
 
   if (!session) redirect("/");
@@ -17,4 +17,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
